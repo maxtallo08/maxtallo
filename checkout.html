@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notifikasi Pembelian</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      .notification {
+        display: none;
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .show {
+        display: block;
+      }
+
+      .close {
+        color: #fff;
+        float: right;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover {
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="notification" class="notification">
+      <span class="close" onclick="closeNotification()">&times;</span>
+      <p>
+        <strong>Pemberitahuan:</strong> Terima kasih telah membeli produk kami!
+        Pesanan Anda sedang diproses.
+      </p>
+    </div>
+
+    <!-- Konten toko online lainnya di sini -->
+
+    <script>
+      // Fungsi untuk menutup notifikasi
+      function closeNotification() {
+        document.getElementById("notification").style.display = "none";
+      }
+
+      // Tampilkan notifikasi setelah halaman dimuat
+      window.onload = function () {
+        document.getElementById("notification").style.display = "block";
+      };
+    </script>
+  </body>
+</html>
